@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: #260139;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.container.index {
+    padding: 24px 0;
+    position: relative;
+    overflow: hidden;  
+    height: 100%;  
+    display: flex;
+    flex-direction: column;
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+    font-size: 16px;
+    color: inherit;
+}
+
+
+p {
+    margin: 0;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+header,
+footer {
+    background-color: #f3ebff;
+    border-bottom: 1px solid #e1d0f5;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    padding: 16px 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .links,
+nav .usuario {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: bold;
+}
+
+
+nav a:hover {
+    color: #6200ee;
+    text-decoration: underline solid #6200ee 3px;
+}
+
+nav .usuario {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 6px 16px;
+    border-radius: 50px;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+nav .usuario .material-symbols-outlined {
+    font-size: 20px;
+}
+
+footer {
+    padding: 8px 0px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+.mensagem {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.mensagem.erro {
+    background-color: #fdeaea;
+    color: #b71c1c;
+    border-color: #f5c6cb;
+}
+
+.mensagem.sucesso {
+    background-color: #eafaf1;
+    color: #27ae60;
+    border-color: #d4efdf;
+}
+
+.mensagem .material-symbols-outlined {
+    vertical-align: middle;
+    font-size: 20px;
+    color: inherit;
+}
+
+
+.formulario-page main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-page .form-container {
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+}
+
+.formulario-page .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.formulario-page a.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #6200ee;
+}
+
+.formulario-page .botao-principal {
+    width: 100%;
+    padding: 12px;
+    background-color: #6200ee;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 0.3s ease;
+}
+
+.formulario-page .botao-principal:hover {
+    background-color: #4b00b8;
+}
+
+
+
+.botao-flutuante {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #6200ee;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(98, 0, 238, 0.4);
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.botao-flutuante .material-symbols-outlined {
+    font-size: 36px;
+}
+
+
+.lista-tarefas {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 8px;
+    padding-bottom: 86px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-tarefa {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e1d0f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.card-tarefa:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.dados-tarefa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.dados-tarefa h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #260139;
+}
+
+.dados-tarefa p {    
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 2px;    
+}
+
+.acoes {
+    display: flex;
+    gap: 15px;
+}
+
+.acoes a {
+    text-decoration: none;
+}
+
+.acoes .material-symbols-outlined {
+    font-size: 24px;
+}
+
+
+.check-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-tarefa {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    accent-color: #6200ee;
+}
+
+.card-tarefa.concluida {
+    opacity: 0.6;
+    background-color: #f9f9f9;
+}
+
+.card-tarefa.concluida h4, 
+.card-tarefa.concluida p,
+.card-tarefa.concluida small {
+    text-decoration: line-through;
+}
+
+.lista-tarefas::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lista-tarefas::-webkit-scrollbar-thumb {
+    background-color: #e1d0f5;
+    border-radius: 10px;
+}
+
+.input-group.checkbox {    
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+}
+
+.input-group.checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #6200ee;
+}
+
+.input-group.checkbox label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #260139;
+    cursor: pointer;
+}
+
+.input-group input[readonly] {
+    background-color: #f3ebff;
+    border-color: #e1d0f5;
+    cursor: not-allowed;
+    color: #666;
+}
+
+.input-group input[readonly]:focus {
+    outline: none;
+    border-color: #e1d0f5;
+}
+
+p.nenhum-registro {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    margin-top: 40px;
+}
